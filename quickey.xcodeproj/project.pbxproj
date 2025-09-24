@@ -29,9 +29,22 @@
 		3A95D9372E80882A0071E129 /* quickeyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = quickeyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		3AAF6E442E809356001A4C16 /* Exceptions for "quickey" folder in "quickey" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 3A95D91E2E8088290071E129 /* quickey */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		3A95D9212E8088290071E129 /* quickey */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				3AAF6E442E809356001A4C16 /* Exceptions for "quickey" folder in "quickey" target */,
+			);
 			path = quickey;
 			sourceTree = "<group>";
 		};
@@ -402,7 +415,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_FILE = quickey/Info.plist;
+				INFOPLIST_KEY_NSAppleEventsUsageDescription = test;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -429,7 +443,8 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_FILE = quickey/Info.plist;
+				INFOPLIST_KEY_NSAppleEventsUsageDescription = test;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
