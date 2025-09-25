@@ -24,6 +24,10 @@ public struct MenuBarView: View {
 			}
 		}
 
+		HintActivationButton {
+			Text("Show Hints")
+		}
+
 		Divider()
 
 		QuitButton {
@@ -100,6 +104,30 @@ struct AccessibilityPermissionButton<Content: View>: View {
 			} label: {
 				content
 			}
+		}
+	}
+}
+
+// Renderst activation button
+// On click it will activate hints (opens hints view)
+struct HintActivationButton<Content: View>: View {
+	@StateObject private var activationService = ActivationService()
+
+	private let content: Content
+
+	init(@ViewBuilder content: () -> Content) {
+		self.content = content()
+	}
+
+	private func activateHints() {
+		activationService.isActive.toggle()
+	}
+
+	var body: some View {
+		Button {
+			activateHints()
+		} label: {
+			content
 		}
 	}
 }
